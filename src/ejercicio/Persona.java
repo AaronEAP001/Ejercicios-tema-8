@@ -8,8 +8,12 @@ public class Persona {
 
     public Persona() {
     }
-    
-    
+
+    public Persona(int edad, String nombre, int telefono) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
 
     public int getEdad() {
         return edad;
@@ -33,6 +37,17 @@ public class Persona {
 
     public void setTelefono(int telefono) {
         this.telefono = telefono;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Persona{");
+        sb.append("edad=").append(edad);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", telefono=").append(telefono);
+        sb.append('}');
+        return sb.toString();
     }
     
     
